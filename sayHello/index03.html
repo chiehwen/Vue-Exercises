@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="uft-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>sayHello</title>
+        <link rel="stylesheet" href="">
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <p>{{ sayHello() }} - <a v-bind:href="link">VueJS Website</a></p>
+        </div>
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    title: 'Hello Vue',
+                    link: 'https://vuejs.org/'
+                },
+                methods: {
+                    sayHello: function() {
+                        return this.title;
+                    }
+                }
+            });
+        </script>
+    </body>
+
+</html>
